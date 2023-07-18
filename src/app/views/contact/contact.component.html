@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 style="font-size: 40px">Let's Connect</h1>
+  <form class="form">
+    <div
+      class="form-info"
+      action="https://formspree.io/f/mbjvldjy"
+      method="POST"
+    >
+      <input
+        type="text"
+        placeholder="Full Name"
+        #name
+      />
+      <input
+        type="email"
+        style="margin-top: 10px"
+        placeholder="Email"
+        #email
+      />
+    </div>
+    <div class="body">
+      <textarea
+        style="width: 100%"
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+        placeholder="Message"
+        #body
+      ></textarea>
+    </div>
+    <button
+      type="button"
+      (click)="sendEmail(name.value, email.value, body.value)"
+    >
+      Send
+    </button>
+  </form>
+</div>
